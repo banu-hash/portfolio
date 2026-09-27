@@ -80,10 +80,10 @@ function Hero() {
         <div className="photo-ring ring-two"></div>
 
         <div className="hero-photo">
-          <img
-            src="\anime.png"
-            alt="Banu"
-          />
+         <img
+  src="/anime.png"
+  alt="Banu"
+/>
         </div>
 
         {/* Floating decoration */}
