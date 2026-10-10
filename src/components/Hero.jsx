@@ -80,11 +80,11 @@ function Hero() {
         <div className="photo-ring ring-two"></div>
 
         <div className="hero-photo">
-         <img
-  src="/anime.png"
-  alt="Banu"
-/>
-        </div>
+  <img
+    src={`${import.meta.env.BASE_URL}anime.png`}
+    alt="Banu"
+  />
+</div>
 
         {/* Floating decoration */}
         <div className="photo-orbit orbit-one"></div>
