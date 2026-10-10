@@ -182,3 +182,351 @@
     border-right-color: var(--border);
   }
 }
+/* =====================================================
+   JOURNEY DETAIL PAGES
+===================================================== */
+
+.journey-detail-page {
+  min-height: 100vh;
+  background: var(--wine);
+  color: var(--white);
+  padding: 40px 6vw 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.journey-detail-page::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: rgba(166, 77, 121, 0.08);
+  filter: blur(100px);
+  top: -200px;
+  right: -150px;
+  pointer-events: none;
+}
+
+.journey-detail-page::after {
+  content: "04";
+  position: absolute;
+  right: 5vw;
+  top: 180px;
+  font-family: "Playfair Display", serif;
+  font-size: 220px;
+  line-height: 1;
+  color: rgba(166, 77, 121, 0.035);
+  pointer-events: none;
+}
+
+.detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Back button */
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  margin-bottom: 80px;
+}
+
+.back-link:hover {
+  color: var(--rose);
+}
+
+/* Label */
+
+.detail-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--rose);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  margin-bottom: 35px;
+}
+
+.detail-label span {
+  font-family: "DM Sans", sans-serif;
+  opacity: 0.7;
+}
+
+/* Header */
+
+.detail-header {
+  max-width: 1000px;
+  margin-bottom: 110px;
+}
+
+.detail-category {
+  color: var(--rose);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+}
+
+.detail-header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(60px, 8vw, 110px);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -3px;
+  margin-bottom: 35px;
+}
+
+.detail-header h1 em {
+  color: var(--rose);
+  font-weight: 400;
+}
+
+.detail-intro {
+  max-width: 750px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* Sections */
+
+.detail-section {
+  margin-bottom: 100px;
+}
+
+.detail-section > h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(38px, 5vw, 60px);
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+
+.detail-card {
+  padding: 35px;
+  border: 1px solid rgba(166, 77, 121, 0.18);
+  background: rgba(26, 26, 29, 0.25);
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+.detail-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(166, 77, 121, 0.5);
+  background: rgba(26, 26, 29, 0.4);
+}
+
+.detail-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.detail-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+
+/* Tag */
+
+.detail-tag {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 14px;
+  border: 1px solid rgba(166, 77, 121, 0.35);
+  color: var(--rose);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+/* Grid */
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Achievements */
+
+.achievement-list {
+  list-style: none;
+  display: grid;
+  gap: 18px;
+}
+
+.achievement-list li {
+  position: relative;
+  padding-left: 25px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.achievement-list li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: var(--rose);
+}
+
+/* Certificate placeholder */
+
+.certificate-placeholder {
+  min-height: 220px;
+  border: 1px dashed rgba(166, 77, 121, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.certificate-placeholder p {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.certificate-placeholder span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Footer button */
+
+.detail-footer {
+  padding-top: 30px;
+  border-top: 1px solid rgba(166, 77, 121, 0.16);
+}
+
+.back-button {
+  display: inline-flex;
+  padding: 14px 22px;
+  border: 1px solid rgba(166, 77, 121, 0.4);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: background 0.3s ease, border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.back-button:hover {
+  background: var(--rose);
+  border-color: var(--rose);
+  transform: translateY(-3px);
+}
+
+/* Mobile */
+
+/* Mobile */
+
+@media (max-width: 800px) {
+  .journey-detail-page {
+    padding: 30px 5vw 70px;
+  }
+
+  .back-link {
+    margin-bottom: 55px;
+  }
+
+  .detail-header {
+    margin-bottom: 75px;
+  }
+
+  .detail-header h1 {
+    font-size: clamp(48px, 13vw, 75px);
+    letter-spacing: -2px;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-card img {
+    height: 200px;
+  }
+
+  .detail-section {
+    margin-bottom: 70px;
+  }
+
+  .detail-card {
+    padding: 25px;
+  }
+
+  .journey-detail-page::after {
+    font-size: 140px;
+  }
+}
+/* Certificate Gallery */
+
+.certificate-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.certificate-card {
+  overflow: hidden;
+  border: 1px solid rgba(166, 77, 121, 0.18);
+  background: rgba(26, 26, 29, 0.25);
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(166, 77, 121, 0.5);
+  background: rgba(26, 26, 29, 0.4);
+}
+
+.certificate-card img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.certificate-info {
+  padding: 18px 20px;
+}
+
+.certificate-info h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.certificate-info p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}

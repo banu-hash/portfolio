@@ -21,7 +21,7 @@ const projects = [
     technologies: ["React", "JavaScript", "HTML", "CSS"],
     role: "Team Member · Development",
     github: "https://github.com/banu-hash/nav",
-    live: "YOUR_LIVE_DEMO_LINK",
+    live: "https://campus-navigator-3hd3.onrender.com/",
   },
   {
     number: "03",
