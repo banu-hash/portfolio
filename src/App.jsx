@@ -1,4 +1,3 @@
-// src/App.jsx
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -11,7 +10,6 @@ import Journey from "./components/Journey";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-// Journey detail pages
 import Education from "./pages/Education";
 import FullStack from "./pages/FullStack";
 import ArtificialIntelligence from "./pages/ArtificialIntelligence";
@@ -21,7 +19,6 @@ function Home() {
   return (
     <>
       <Navbar />
-
       <main>
         <Hero />
         <About />
@@ -30,7 +27,6 @@ function Home() {
         <Journey />
         <Contact />
       </main>
-
       <Footer />
     </>
   );
@@ -38,12 +34,10 @@ function Home() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/portfolio">
       <Routes>
-        {/* Main Portfolio */}
         <Route path="/" element={<Home />} />
 
-        {/* Journey Detail Pages */}
         <Route
           path="/journey/education"
           element={<Education />}
