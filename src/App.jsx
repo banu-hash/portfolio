@@ -34,7 +34,9 @@ function Home() {
 
 function App() {
   return (
-    <BrowserRouter basename="/portfolio">
+    <BrowserRouter
+      basename={import.meta.env.BASE_URL.replace(/\/$/, "")}
+    >
       <Routes>
         <Route path="/" element={<Home />} />
 
